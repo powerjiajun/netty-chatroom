@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>netty_websocket</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/chat.css">
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script src="../bootstrap/js/chat.js"></script>
+</head>
+
+<body class="background">
+<div class="mianFrame">
+    <div class="panel scroll" id="panel">
+        <div class="header">
+            <img class="avatar img-rounded" id="myAvatar" src="../img/dog.png"
+                 style="height: 50px;width: 50px">
+            <div id="nick" style="color: white;font-size: large"></div>
+        </div>
+        <h3 id="userCount" style="color: white;font-size: large;margin-left: 20px"></h3>
+        <div id="userList" style="border-top:1px solid #cccccc"></div>
+    </div>
+    <div id="repeatBox">
+        <div class="box" id="box">
+            <div class="textareaHead" id="textareaHead">群聊室</div>
+            <div class="textarea scroll" id="responseContent"></div>
+            <form onSubmit="return false;">
+                <label>
+                    <textarea id="sendTextarea" class="box_ft" name="message"></textarea>
+                </label>
+                <div class="send">
+                    <button class="sendButton" onClick="sendMessage(this.form.message.value)">发送</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    window.onload = function () {
+        $('#nick').text(GetQueryString("nick"));
+        websocket();
+    };
+</script>
+</html>

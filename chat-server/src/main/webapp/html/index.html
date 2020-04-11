@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天室</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/index.css">
+</head>
+
+<body>
+<div class="panel panel-warning" style="width: 500px; margin: auto; margin-top: 150px">
+    <div class="panel-heading" style="height: 50px">
+        <h3 class="panel-title">欢迎来到聊天室</h3>
+    </div>
+    <div class="panel-body" style="height: 200px">
+        <form onsubmit="return goToChat(message.value)">
+            <div class="input-group" style="margin-top: 30px">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        登陆
+                    </button>
+                </span>
+                <input type="text" class="form-control" name="message" title="login">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script>
+    function goToChat(message) {
+        if (message === "" || message === null) {
+            alert("昵称不能为空~");
+            return;
+        }
+        if (message.length > 15) {
+            alert("昵称字数不能大于15~");
+            return;
+        }
+        window.location.href = "chat.html?nick=" + encodeURI(encodeURI(message));
+        return false;
+    }
+</script>
+</html>
