@@ -1,5 +1,5 @@
 # netty-chatroom
-一个用netty搭建的web聊天室，可实现群聊和私聊。
+一个用netty搭建的web聊天室，可实现群聊和私聊。jdk最低版本要求1.8
 
 
 # 登录页
