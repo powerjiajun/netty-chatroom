@@ -5,12 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA
+ * 
+ * @author Administrator
  *
- * @Author yuanhaoyue swithaoy@gmail.com
- * @Description 日期格式转换工具类
- * @Date 2018-05-09
- * @Time 21:35
  */
 public class DateFormatUtils {
     /** yyyy:年 */

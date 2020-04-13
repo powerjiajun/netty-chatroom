@@ -7,12 +7,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA
+ * 
+ * @author Administrator
  *
- * @Author yuanhaoyue swithaoy@gmail.com
- * @Description
- * @Date 2018-05-09
- * @Time 21:34
  */
 public class DateUtils {
     private static final String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};

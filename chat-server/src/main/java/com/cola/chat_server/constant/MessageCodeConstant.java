@@ -1,12 +1,9 @@
 package com.cola.chat_server.constant;
 
 /**
- * Created with IntelliJ IDEA
+ * 
+ * @author Administrator
  *
- * @Author yuanhaoyue swithaoy@gmail.com
- * @Description Code 常量
- * @Date 2018-05-12
- * @Time 16:53
  */
 public class MessageCodeConstant {
     /**
